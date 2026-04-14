@@ -469,7 +469,7 @@
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Sending...';
             
             try {
-                const response = await fetch('{{ route("contact.store") }}', {
+                const response = await fetch('/contact', {
                     method: 'POST',
                     headers: {
                         'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value,
