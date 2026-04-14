@@ -6,7 +6,7 @@
     <title>Vikash Mishra | Laravel Developer Portfolio</title>
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('logo1.png') }}?v=2" type="image/png">
-<link rel="shortcut icon" href="{{ asset('logo1.png') }}?v=2">
+    <link rel="shortcut icon" href="{{ asset('logo1.png') }}?v=2">
     <!-- Tailwind CSS + Font Awesome + Google Fonts + AOS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -43,76 +43,117 @@
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
 
-    <!-- Navbar -->
+    <!-- Navbar - Fully Responsive with Hamburger Menu -->
     <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 glass shadow-lg">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home" class="flex items-center gap-3 group cursor-pointer">
-    
-    <!-- Logo -->
-    <img src="{{ asset('logo.png') }}" 
-         alt="Logo" 
-         class="h-14 w-auto transition duration-300 group-hover:scale-150">
-
-    <!-- Text -->
-    <span class="text-2xl font-extrabold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-        Vikash Mishra
-    </span>
-
-</a>
-            <div class="hidden md:flex space-x-8 text-sm font-medium">
+        <div class="container mx-auto px-4 md:px-6 py-3 md:py-4 flex justify-between items-center">
+            <a href="#home" class="flex items-center gap-2 md:gap-3 group cursor-pointer">
+                <!-- Logo with responsive size -->
+                <img src="{{ asset('logo.png') }}" 
+                     alt="Logo" 
+                     class="h-8 md:h-10 w-auto transition duration-300 group-hover:scale-110">
+                <!-- Brand text - hidden on very small? Keep visible but smaller -->
+                <span class="text-lg sm:text-xl md:text-2xl font-extrabold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                    Vikash Mishra
+                </span>
+            </a>
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-6 lg:space-x-8 text-sm font-medium">
                 <a href="#home" class="nav-link hover:text-blue-400 transition">Home</a>
                 <a href="#journey" class="nav-link hover:text-blue-400 transition">Journey</a>
                 <a href="#projects" class="nav-link hover:text-blue-400 transition">Projects</a>
                 <a href="#skills" class="nav-link hover:text-blue-400 transition">Skills</a>
                 <a href="#contact" class="nav-link hover:text-blue-400 transition">Contact</a>
             </div>
+            <!-- Mobile Hamburger Button -->
             <div class="md:hidden">
-                <button id="mobileBtn" class="text-blue-400 text-2xl"><i class="fas fa-bars"></i></button>
+                <button id="mobileBtn" class="text-blue-400 text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
-        <div id="mobileMenu" class="md:hidden hidden glass flex-col px-6 py-4 space-y-3 border-t border-blue-500/20">
-            <a href="#home" class="mobile-nav-link block py-2 hover:text-blue-400">Home</a>
-            <a href="#journey" class="mobile-nav-link block py-2 hover:text-blue-400">Journey</a>
-            <a href="#projects" class="mobile-nav-link block py-2 hover:text-blue-400">Projects</a>
-            <a href="#skills" class="mobile-nav-link block py-2 hover:text-blue-400">Skills</a>
-            <a href="#contact" class="mobile-nav-link block py-2 hover:text-blue-400">Contact</a>
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobileMenu" class="md:hidden hidden glass flex-col px-4 py-4 space-y-3 border-t border-blue-500/20">
+            <a href="#home" class="mobile-nav-link block py-2 text-base hover:text-blue-400 transition">Home</a>
+            <a href="#journey" class="mobile-nav-link block py-2 text-base hover:text-blue-400 transition">Journey</a>
+            <a href="#projects" class="mobile-nav-link block py-2 text-base hover:text-blue-400 transition">Projects</a>
+            <a href="#skills" class="mobile-nav-link block py-2 text-base hover:text-blue-400 transition">Skills</a>
+            <a href="#contact" class="mobile-nav-link block py-2 text-base hover:text-blue-400 transition">Contact</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center relative pt-20">
-        <div class="container mx-auto px-6 md:px-12 lg:px-20 flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-16">
-            <div class="text-center lg:text-left max-w-xl lg:max-w-2xl" data-aos="fade-right" data-aos-duration="1000">
-                <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 rounded-full px-4 py-1.5 mb-6">
-                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span></span>
-                    <span class="text-sm text-blue-300 font-medium">Open to work</span>
-                </div>
-                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-4">Hi, I'm <span class="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Vikash Mishra</span></h1>
-                <div class="text-3xl md:text-4xl font-semibold mb-4 h-20"><span class="text-gray-300">I'm a </span><span id="typed-role" class="text-blue-400 border-r-2 border-blue-400"></span></div>
-                <p class="text-gray-300 text-lg leading-relaxed mb-8 border-l-4 border-blue-500 pl-5">Laravel Developer with experience in PHP, Laravel, API development & database optimization. Passionate about clean code and scalable web apps.</p>
-                <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
-                    <a href="#projects" class="btn-glow bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-xl font-semibold shadow-lg shadow-blue-600/30 flex items-center gap-2"><i class="fas fa-code-branch"></i> View Work</a>
-                    <a href="#contact" class="border border-blue-500 hover:bg-blue-500/10 px-6 py-3 rounded-xl font-semibold flex items-center gap-2"><i class="fas fa-paper-plane"></i> Hire Me</a>
-                    <a href="{{ asset('resume.pdf') }}" download class="bg-slate-800 hover:bg-slate-700 border border-gray-700 px-6 py-3 rounded-xl font-semibold transition flex items-center gap-2">
-                        <i class="fas fa-download"></i> Resume
-                    </a>
-                </div>
-                <div class="flex gap-6 mt-8 justify-center lg:justify-start text-gray-400">
-                    <a href="https://github.com/vikash103" target="_blank" class="hover:text-blue-400 text-xl"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/vikash-mishra-717945287/" target="_blank" class="hover:text-blue-400 text-xl"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="hover:text-blue-400 text-xl"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-            <div data-aos="zoom-in" class="relative lg:ml-auto flex-shrink-0 flex items-center justify-center">
-                <div class="w-80 h-80 md:w-[420px] md:h-[420px] rounded-full bg-gradient-to-tr from-blue-500 via-indigo-500 to-purple-500 p-[6px] shadow-[0_0_60px_rgba(59,130,246,0.5)] transition-all duration-500 hover:scale-105">
-                    <div class="w-full h-full rounded-full overflow-hidden bg-slate-900">
-                        <img src="{{ asset('image.png') }}" alt="Vikash Mishra" class="w-full h-full object-cover scale-125 object-[center_25%]">
+    <!-- Hero Section - Fully Responsive Mobile First -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative pt-20 md:pt-24 overflow-hidden">
+        <div class="container mx-auto px-4 md:px-8 lg:px-12">
+            <!-- Flex column on mobile, row on desktop -->
+            <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 md:gap-12 lg:gap-16">
+                <!-- Left Content -->
+                <div class="text-center lg:text-left w-full lg:w-1/2" data-aos="fade-right" data-aos-duration="1000">
+                    <!-- Open to work badge -->
+                    <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 rounded-full px-3 py-1 md:px-4 md:py-1.5 mb-4 md:mb-6">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                        </span>
+                        <span class="text-xs md:text-sm text-blue-300 font-medium">Open to work</span>
+                    </div>
+                    
+                    <!-- Main Heading - responsive text sizes -->
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-3 md:mb-4">
+                        Hi, I'm <span class="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Vikash Mishra</span>
+                    </h1>
+                    
+                    <!-- Typing animation container - fixed overflow -->
+                    <div class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 md:mb-6 h-auto min-h-[3rem] md:min-h-[4rem] flex flex-wrap justify-center lg:justify-start items-center gap-1">
+                        <span class="text-gray-300">I'm a</span>
+                        <span id="typed-role" class="text-blue-400 border-r-2 border-blue-400 inline-block break-words max-w-full"></span>
+                    </div>
+                    
+                    <!-- Description -->
+                    <p class="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed mb-6 md:mb-8 border-l-4 border-blue-500 pl-3 md:pl-5 text-center lg:text-left">
+                        Laravel Developer with experience in PHP, Laravel, API development & database optimization. Passionate about clean code and scalable web apps.
+                    </p>
+                    
+                    <!-- Buttons - stacked on mobile, row on desktop -->
+                    <div class="flex flex-col sm:flex-row md:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
+                        <a href="#projects" class="btn-glow bg-blue-600 hover:bg-blue-500 px-5 md:px-6 py-2.5 md:py-3 rounded-xl font-semibold shadow-lg shadow-blue-600/30 flex items-center justify-center gap-2 text-sm md:text-base">
+                            <i class="fas fa-code-branch"></i> View Work
+                        </a>
+                        <a href="#contact" class="border border-blue-500 hover:bg-blue-500/10 px-5 md:px-6 py-2.5 md:py-3 rounded-xl font-semibold flex items-center justify-center gap-2 text-sm md:text-base">
+                            <i class="fas fa-paper-plane"></i> Hire Me
+                        </a>
+                        <a href="{{ asset('resume.pdf') }}" download class="bg-slate-800 hover:bg-slate-700 border border-gray-700 px-5 md:px-6 py-2.5 md:py-3 rounded-xl font-semibold transition flex items-center justify-center gap-2 text-sm md:text-base">
+                            <i class="fas fa-download"></i> Resume
+                        </a>
+                    </div>
+                    
+                    <!-- Social Icons -->
+                    <div class="flex gap-5 md:gap-6 mt-6 md:mt-8 justify-center lg:justify-start text-gray-400">
+                        <a href="https://github.com/vikash103" target="_blank" class="hover:text-blue-400 text-lg md:text-xl transition"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/vikash-mishra-717945287/" target="_blank" class="hover:text-blue-400 text-lg md:text-xl transition"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="hover:text-blue-400 text-lg md:text-xl transition"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                <div class="absolute -bottom-4 -right-4 bg-slate-800 rounded-full p-3 shadow-lg border border-blue-500/40 animate-bounce"><i class="fas fa-code text-blue-400 text-xl"></i></div>
+                
+                <!-- Right Image - Responsive sizing -->
+                <div data-aos="zoom-in" class="relative lg:ml-auto flex-shrink-0 flex items-center justify-center w-full lg:w-1/2">
+                    <div class="w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-tr from-blue-500 via-indigo-500 to-purple-500 p-[5px] md:p-[6px] shadow-[0_0_40px_rgba(59,130,246,0.4)] transition-all duration-500 hover:scale-105">
+                        <div class="w-full h-full rounded-full overflow-hidden bg-slate-900">
+                            <img src="{{ asset('image.png') }}" alt="Vikash Mishra" class="w-full h-full object-cover scale-110 object-[center_25%]">
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-3 -right-3 md:-bottom-4 md:-right-4 bg-slate-800 rounded-full p-2 md:p-3 shadow-lg border border-blue-500/40 animate-bounce">
+                        <i class="fas fa-code text-blue-400 text-base md:text-xl"></i>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"><a href="#journey" class="text-gray-400 hover:text-blue-400"><i class="fas fa-chevron-down text-2xl"></i></a></div>
+        
+        <!-- Scroll Down Arrow -->
+        <div class="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#journey" class="text-gray-400 hover:text-blue-400">
+                <i class="fas fa-chevron-down text-xl md:text-2xl"></i>
+            </a>
+        </div>
     </section>
 
     <!-- Journey Timeline -->
@@ -310,7 +351,17 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
         AOS.init({ duration: 800, once: true, offset: 120 });
-        new Typed('#typed-role', { strings: ['Laravel Developer', 'PHP Artisan', 'API Architect', 'Problem Solver'], typeSpeed: 70, backSpeed: 40, backDelay: 1500, loop: true, showCursor: true, cursorChar: '|' });
+        new Typed('#typed-role', { 
+            strings: ['Laravel Developer', 'PHP Artisan', 'API Architect', 'Problem Solver'], 
+            typeSpeed: 70, 
+            backSpeed: 40, 
+            backDelay: 1500, 
+            loop: true, 
+            showCursor: true, 
+            cursorChar: '|',
+            // Prevent text cutoff by ensuring container adjusts
+            onStringTyped: function() { document.getElementById('typed-role').style.whiteSpace = 'normal'; }
+        });
 
         // Skill bars animation
         const skillBars = document.querySelectorAll('.skill-progress');
