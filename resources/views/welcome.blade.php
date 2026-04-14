@@ -395,7 +395,7 @@
     <script>
         AOS.init({ duration: 800, once: true, offset: 120 });
         new Typed('#typed-role', { 
-            strings: ['Laravel Developer', 'PHP Artisan', 'API Architect', 'Problem Solver'], 
+            strings: ['PHP & Laravel Developer', 'PHP Artisan', 'API Architect', 'Problem Solver'], 
             typeSpeed: 70, 
             backSpeed: 40, 
             backDelay: 1500, 
