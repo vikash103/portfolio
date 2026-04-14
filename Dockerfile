@@ -14,8 +14,13 @@ RUN composer install
 
 RUN cp .env.example .env
 
-# 🔥 THIS LINE ADD KARO
 RUN php artisan key:generate
+
+# 🔥 SQLITE FIX
+RUN mkdir -p /app/database && touch /app/database/database.sqlite
+
+# 🔥 TABLE CREATE
+RUN php artisan migrate --force
 
 EXPOSE 10000
 
