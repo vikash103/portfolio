@@ -36,7 +36,6 @@
         .active-nav:after { content: ''; position: absolute; bottom: -6px; left: 0; width: 100%; height: 2px; background: #3b82f6; border-radius: 2px; }
         .animate-pulse-slow { animation: pulseSlow 4s infinite; }
         @keyframes pulseSlow { 0%,100% { box-shadow: 0 0 0 0 rgba(59,130,246,0.4); } 50% { box-shadow: 0 0 0 15px rgba(59,130,246,0); } }
-        /* Fix for typing container */
         #typed-role { white-space: normal; word-break: break-word; display: inline-block; }
     </style>
 </head>
@@ -49,16 +48,11 @@
     <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 glass shadow-lg">
         <div class="container mx-auto px-4 sm:px-6 py-3 md:py-4 flex justify-between items-center">
             <a href="#home" class="flex items-center gap-2 md:gap-3 group cursor-pointer">
-                <!-- Logo - responsive size -->
-                <img src="{{ asset('logo.png') }}" 
-                     alt="Logo" 
-                     class="h-8 sm:h-10 md:h-12 w-auto transition duration-300 group-hover:scale-110">
-                <!-- Brand text - smaller on mobile -->
+                <img src="{{ asset('logo.png') }}" alt="Logo" class="h-8 sm:h-10 md:h-12 w-auto transition duration-300 group-hover:scale-110">
                 <span class="text-base sm:text-lg md:text-2xl font-extrabold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
                     Vikash Mishra
                 </span>
             </a>
-            <!-- Desktop Navigation -->
             <div class="hidden md:flex space-x-6 lg:space-x-8 text-sm font-medium">
                 <a href="#home" class="nav-link hover:text-blue-400 transition">Home</a>
                 <a href="#journey" class="nav-link hover:text-blue-400 transition">Journey</a>
@@ -66,14 +60,10 @@
                 <a href="#skills" class="nav-link hover:text-blue-400 transition">Skills</a>
                 <a href="#contact" class="nav-link hover:text-blue-400 transition">Contact</a>
             </div>
-            <!-- Mobile Hamburger Button -->
             <div class="md:hidden">
-                <button id="mobileBtn" class="text-blue-400 text-2xl focus:outline-none">
-                    <i class="fas fa-bars"></i>
-                </button>
+                <button id="mobileBtn" class="text-blue-400 text-2xl focus:outline-none"><i class="fas fa-bars"></i></button>
             </div>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobileMenu" class="md:hidden hidden glass flex-col px-4 py-4 space-y-3 border-t border-blue-500/20">
             <a href="#home" class="mobile-nav-link block py-2 text-base hover:text-blue-400 transition">Home</a>
             <a href="#journey" class="mobile-nav-link block py-2 text-base hover:text-blue-400 transition">Journey</a>
@@ -83,15 +73,13 @@
         </div>
     </nav>
 
-    <!-- Hero Section - Completely Mobile Optimized -->
+    <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center justify-center relative pt-20 pb-12 overflow-hidden">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Stack vertically on mobile, row on desktop -->
             <div class="flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-12 lg:gap-16">
                 
                 <!-- Left Content - Text Section -->
                 <div class="text-center lg:text-left w-full lg:w-1/2 order-2 lg:order-1" data-aos="fade-right" data-aos-duration="1000">
-                    <!-- Badge -->
                     <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 rounded-full px-3 py-1 md:px-4 md:py-1.5 mb-4 md:mb-6">
                         <span class="relative flex h-2 w-2">
                             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
@@ -100,23 +88,19 @@
                         <span class="text-xs md:text-sm text-blue-300 font-medium">Open to work</span>
                     </div>
                     
-                    <!-- Heading - responsive text size -->
                     <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-3 md:mb-4">
                         Hi, I'm <span class="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Vikash Mishra</span>
                     </h1>
                     
-                    <!-- Typing animation with proper wrapping -->
                     <div class="flex flex-wrap justify-center lg:justify-start items-center gap-1 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 md:mb-6">
                         <span class="text-gray-300">I'm a</span>
                         <span id="typed-role" class="text-blue-400 border-r-2 border-blue-400 inline-block max-w-full break-words"></span>
                     </div>
                     
-                    <!-- Description -->
                     <p class="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed mb-6 md:mb-8 border-l-4 border-blue-500 pl-3 md:pl-5 text-center lg:text-left">
                         Laravel Developer with experience in PHP, Laravel, API development & database optimization. Passionate about clean code and scalable web apps.
                     </p>
                     
-                    <!-- Buttons - stack vertically on mobile, row on tablet and up -->
                     <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
                         <a href="#projects" class="btn-glow bg-blue-600 hover:bg-blue-500 px-5 md:px-6 py-2.5 md:py-3 rounded-xl font-semibold shadow-lg shadow-blue-600/30 flex items-center justify-center gap-2 text-sm md:text-base transition">
                             <i class="fas fa-code-branch"></i> View Work
@@ -129,7 +113,6 @@
                         </a>
                     </div>
                     
-                    <!-- Social Icons -->
                     <div class="flex gap-5 md:gap-6 mt-6 md:mt-8 justify-center lg:justify-start text-gray-400">
                         <a href="https://github.com/vikash103" target="_blank" class="hover:text-blue-400 text-lg md:text-xl transition"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/vikash-mishra-717945287/" target="_blank" class="hover:text-blue-400 text-lg md:text-xl transition"><i class="fab fa-linkedin-in"></i></a>
@@ -137,13 +120,14 @@
                     </div>
                 </div>
                 
-                <!-- Right Content - Profile Image Section -->
+                <!-- Right Content - Profile Image (shifted downward) -->
                 <div data-aos="zoom-in" class="relative order-1 lg:order-2 flex-shrink-0 flex items-center justify-center w-full lg:w-1/2 mb-6 lg:mb-0">
                     <div class="w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-full bg-gradient-to-tr from-blue-500 via-indigo-500 to-purple-500 p-[4px] sm:p-[5px] md:p-[6px] shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-all duration-500 hover:scale-105 mx-auto">
-                     <div class="w-full h-full rounded-full overflow-hidden bg-slate-900">
-    <img src="{{ asset('image.png') }}" 
-         class="w-full h-full object-cover object-[center_70%] scale-125">
-</div>
+                        <div class="w-full h-full rounded-full overflow-hidden bg-slate-900">
+                            <!-- object-position changed to center_85% to shift image downward -->
+                            <img src="{{ asset('image.png') }}" 
+                                 class="w-full h-full object-cover object-[center_85%] scale-125">
+                        </div>
                     </div>
                     <div class="absolute -bottom-2 -right-2 sm:-bottom-3 sm:-right-3 md:-bottom-4 md:-right-4 bg-slate-800 rounded-full p-2 md:p-3 shadow-lg border border-blue-500/40 animate-bounce">
                         <i class="fas fa-code text-blue-400 text-sm sm:text-base md:text-xl"></i>
@@ -152,15 +136,12 @@
             </div>
         </div>
         
-        <!-- Scroll Down Arrow -->
         <div class="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <a href="#journey" class="text-gray-400 hover:text-blue-400">
-                <i class="fas fa-chevron-down text-xl md:text-2xl"></i>
-            </a>
+            <a href="#journey" class="text-gray-400 hover:text-blue-400"><i class="fas fa-chevron-down text-xl md:text-2xl"></i></a>
         </div>
     </section>
 
-    <!-- Journey Timeline (unchanged but responsive) -->
+    <!-- Journey Timeline -->
     <section id="journey" class="py-16 md:py-24 bg-slate-950/50">
         <div class="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
             <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
@@ -213,7 +194,7 @@
         </div>
     </section>
 
-    <!-- Projects Section (unchanged but ensure responsiveness) -->
+    <!-- Projects Section -->
     <section id="projects" class="py-16 md:py-24 bg-slate-900/40">
         <div class="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
             <div class="text-center mb-12 md:mb-14" data-aos="fade-up">
@@ -350,7 +331,7 @@
         </div>
     </section>
 
-    <!-- Contact Section (unchanged but responsive) -->
+    <!-- Contact Section -->
     <section id="contact" class="py-16 md:py-24 bg-slate-900/60">
         <div class="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
             <div class="text-center mb-10 md:mb-12" data-aos="fade-up">
@@ -409,7 +390,6 @@
 
     <button id="backToTop" class="fixed bottom-6 right-6 bg-blue-600 p-3 rounded-full shadow-lg text-white opacity-0 invisible transition-all duration-300 hover:bg-blue-500 z-50"><i class="fas fa-arrow-up"></i></button>
 
-    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
@@ -424,12 +404,10 @@
             cursorChar: '|'
         });
 
-        // Skill bars animation
         const skillBars = document.querySelectorAll('.skill-progress');
         const animateSkills = () => { skillBars.forEach(bar => { const width = bar.getAttribute('data-width'); const rect = bar.getBoundingClientRect(); if (rect.top < window.innerHeight - 100 && rect.bottom > 0) bar.style.width = width + '%'; }); };
         window.addEventListener('scroll', animateSkills); animateSkills();
 
-        // Active nav highlight
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.nav-link');
         const mobileLinks = document.querySelectorAll('.mobile-nav-link');
@@ -441,21 +419,17 @@
         }
         window.addEventListener('scroll', updateActive); updateActive();
 
-        // Back to top
         const backBtn = document.getElementById('backToTop');
         window.addEventListener('scroll', () => { if (window.scrollY > 400) backBtn.classList.add('opacity-100', 'visible'); else backBtn.classList.remove('opacity-100', 'visible'); });
         backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-        // Mobile menu
         const mobileBtn = document.getElementById('mobileBtn');
         const mobileMenu = document.getElementById('mobileMenu');
         mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
         document.querySelectorAll('.mobile-nav-link').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
 
-        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function(e) { const target = document.querySelector(this.getAttribute('href')); if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }); });
 
-        // AJAX Contact Form
         const form = document.getElementById('ajaxContactForm');
         const messageDiv = document.getElementById('ajaxFormMessage');
         const submitBtn = document.getElementById('ajaxSubmitBtn');
