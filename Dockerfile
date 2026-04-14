@@ -12,6 +12,9 @@ COPY . .
 
 RUN composer install
 
+# 🔥 Add this line (IMPORTANT)
+RUN cp .env.example .env
+
 EXPOSE 10000
 
 CMD php artisan serve --host=0.0.0.0 --port=10000
