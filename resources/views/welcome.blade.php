@@ -140,9 +140,9 @@
                 <!-- Right Content - Profile Image Section -->
                 <div data-aos="zoom-in" class="relative order-1 lg:order-2 flex-shrink-0 flex items-center justify-center w-full lg:w-1/2 mb-6 lg:mb-0">
                     <div class="w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-full bg-gradient-to-tr from-blue-500 via-indigo-500 to-purple-500 p-[4px] sm:p-[5px] md:p-[6px] shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-all duration-500 hover:scale-105 mx-auto">
-                      <div class="w-full h-full rounded-full overflow-hidden bg-slate-900">
+                     <div class="w-full h-full rounded-full overflow-hidden bg-slate-900">
     <img src="{{ asset('image.png') }}" 
-         class="w-full h-full object-cover object-[center_30%] scale-110">
+         class="w-full h-full object-cover object-[center_60%]">
 </div>
                     </div>
                     <div class="absolute -bottom-2 -right-2 sm:-bottom-3 sm:-right-3 md:-bottom-4 md:-right-4 bg-slate-800 rounded-full p-2 md:p-3 shadow-lg border border-blue-500/40 animate-bounce">
