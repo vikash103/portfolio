@@ -12,8 +12,10 @@ COPY . .
 
 RUN composer install
 
-# 🔥 Add this line (IMPORTANT)
 RUN cp .env.example .env
+
+# 🔥 THIS LINE ADD KARO
+RUN php artisan key:generate
 
 EXPOSE 10000
 
