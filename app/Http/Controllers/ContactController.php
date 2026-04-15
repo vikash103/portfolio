@@ -24,7 +24,6 @@ class ContactController extends Controller
             Contact::create([
                 'name' => $validated['name'],
                 'email' => $validated['email'],
-                'subject' => $validated['subject'] ?? null,
                 'message' => $validated['message'],
             ]);
 
